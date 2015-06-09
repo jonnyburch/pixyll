@@ -3,22 +3,48 @@ layout: default
 ---
 
 <div class="home">
-
+  <p>Carb-load Recipes</p>
   <div class="posts">
-    {% for post in paginator.posts %}
-      <div class="post">
-        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h2 post-title">{{ post.title }}</h3></a>
+
+    {% for post in site.categories.1-recipe-carb %}
+      <div>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h4 class="post-title">{{ post.title }}</h4></a>
         <p class="post-summary">
           {% if post.summary %}
             {{ post.summary }}
-          {% else %}
-            {{ post.excerpt }}
           {% endif %}
         </p>
       </div>
     {% endfor %}
   </div>
+  <br>
+  <p>Low-Carb Recipes</p>
+  <div class="posts">
 
-  {% include pagination.html %}
+    {% for post in site.categories.1-recipe-locarb %}
+      <div>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h4 class="post-title">{{ post.title }}</h4></a>
+        <p class="post-summary">
+          {% if post.summary %}
+            {{ post.summary }}
+          {% endif %}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
+  <br>
+  <p>Snacks</p>
+  <div class="posts">
+
+    {% for post in site.categories.1-recipe-snack %}
+      <div>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h4 class="post-title">{{ post.title }}</h4></a>
+        <p class="post-summary">
+          {% if post.summary %}
+            {{ post.summary }}
+          {% endif %}
+        </p>
+      </div>
+    {% endfor %}
+  </div>
 </div>
