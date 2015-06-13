@@ -3,7 +3,8 @@ title:       JB Recipes
 email:       jonny@jonnyburch.com
 author:      Jonny Burch
 description: "Recipes"
-url: 		 "http://jonnyburch.github.io/recipes"
+baseurl: 	 "/recipes"
+url: 		 "http://jonnyburch.github.io"
 
 # Google analytics
 google_analytics:
